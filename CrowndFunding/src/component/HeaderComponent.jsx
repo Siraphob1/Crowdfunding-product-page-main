@@ -14,13 +14,33 @@ const HeaderComponent=()=>{
         Setclickhamburger(!prevstatus);
     }
     return(
-        <header className=" w-full ">
+        <header className=" w-full font-Commissioner font-medium sm:font-normal sm:text-white ">
             <img src={bg_mobile} alt="bg_mobile" className=" sm:hidden" />
-            <img src={bg_desktop} alt="bg_desktop" className=" hidden sm:block" />
-            <div className=" absolute top-0 flex justify-between w-full px-5 pt-8">
-                <img src={logo} alt="logo" className=""/>
-                <img src={hamburger} alt="hamburger" className={clickhamburger?"hidden sm:hidden":"block sm:hidden"} onClick={Switchhamburger}/>
-                <img src={close_menu} alt="close_menu" className={clickhamburger?"block sm:hidden":"hidden sm:hidden"} onClick={Switchhamburger}/>
+            <img src={bg_desktop} alt="bg_desktop" className=" hidden  sm:block sm:w-full sm:h-auto" />
+            <div className=" absolute top-0 flex justify-between w-full px-5 pt-8
+                             sm:px-28   lg:px-40 lg:pt-10">
+                <img src={logo} alt="logo" className=" z-10 h-5 hover:cursor-pointer"/>
+                <img src={hamburger} alt="hamburger" className={clickhamburger?"hidden  sm:hidden":"z-10 block w-4 h-4 hover:cursor-pointer sm:hidden"} onClick={Switchhamburger}/>
+                <img src={close_menu} alt="close_menu" className={clickhamburger?"z-10 block w-4 h-4 hover:cursor-pointer sm:hidden":"hidden sm:hidden"} onClick={Switchhamburger}/>
+                <div className={clickhamburger
+                                            ?"absolute top-0 left-0 bg-gradient-to-b from-black to-#7a7a7a opacity-90 w-full h-screen sm:hidden"
+                                            :"hidden"}>                                                     
+                </div>               
+                <nav className=" absolute top-24 w-11/12 left-1/2 -translate-x-1/2  
+                                 sm:static sm:top-auto sm:left-auto sm:w-auto  sm:translate-x-0 ">
+                    <ul className={clickhamburger
+                                                ?`flex flex-col w-full bg-white rounded-lg 
+                                                 sm:flex-row sm:bg-transparent `
+                                                :"hidden sm:flex sm:flex-row"}>
+
+                        <li className=" border-b sm:border-b-0"><a href="" className="inline-block pl-4 py-5 w-full sm:py-0">About</a></li>
+                        <li className=" border-b sm:border-b-0"><a href="" className="inline-block pl-4 py-5 w-full sm:py-0 sm:pl-6">Discover</a></li>
+                        <li><a href="" className="inline-block pl-4 py-5 w-full sm:py-0 sm:pl-6">Get Started</a></li>                                       
+                        {/* <li className=" pl-4 py-6 border-b sm:py-0 sm:border-b-0"><a href="" className="w-full h-full">About</a></li>
+                        <li className=" pl-4 py-6 border-b sm:pl-6 sm:py-0 sm:border-b-0"><a href="">Discover</a></li>
+                        <li className=" pl-4 py-6 sm:pl-6 sm:py-0 "><a href="">Get Started</a></li>                       */}
+                    </ul>
+                </nav>
             </div>  
 
         </header>
