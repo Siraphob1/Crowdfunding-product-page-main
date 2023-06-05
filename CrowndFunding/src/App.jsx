@@ -1,10 +1,10 @@
 import './App.css'
-
+import HeaderComponent from './component/HeaderComponent'
 function App() {
 
   return (
     <>
-    <div className=' hover:text-blue-700'>Hello</div>
+     <HeaderComponent/>
     </>
   )
 }
