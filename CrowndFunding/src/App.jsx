@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-    Hello Top
+    <div className=' hover:text-blue-700'>Hello</div>
     </>
   )
 }
