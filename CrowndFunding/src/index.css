@@ -5,7 +5,17 @@
 @tailwind utilities;
 
 
+:root{
+  --c-moderatecyan:#3cb4ac;
+  --c-darkcyan:#147b74;
+  --c-darkgray:#7a7a7a;
+  --FF:'Commissioner', sans-serif;
+}
 
+body{
+  background-color: rgb(246, 241, 241);
+  font-family: var(--FF);
+}
 
 
 /* 
