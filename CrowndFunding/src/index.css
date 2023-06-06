@@ -4,7 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer components{
+  .btn-bookmark{
+    @apply  active:opacity-80
+            lg:absolute lg:left-0 lg:-translate-x-1/2 lg:top-0
+            
+  }
+  .nava-tag{
+    @apply  hover:underline  
+            sm:py-0 sm:pl-6 
+            inline-block pl-4 py-5 w-full 
+  }
+  .btn-click{
+    @apply hover:cursor-pointer hover:bg-[#147b74]            
+           text-white font-medium bg-[#3cb4ac] px-8 py-3 mr-4 rounded-full
+  }
+}
 :root{
   --c-moderatecyan:#3cb4ac;
   --c-darkcyan:#147b74;
