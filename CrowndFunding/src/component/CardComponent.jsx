@@ -18,7 +18,7 @@ const CardComponent = (props) => {
           <span className=' text-[2rem] font-bold'>{count}</span> 
           <span className=' ml-2 text-[#147b74]'>left</span>
         </div>
-        <button className='mt-4 text-white text-[1rem] font-medium bg-[#3cb4ac] px-8 py-3 mr-4 rounded-full'>
+        <button className='mt-4 btn-click'>
           {count>0 ?"Select Reward"
                    :"Out of Stock"}
         </button>
