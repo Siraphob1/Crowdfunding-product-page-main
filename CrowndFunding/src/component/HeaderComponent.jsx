@@ -33,9 +33,9 @@ const HeaderComponent=()=>{
                                                   sm:flex-row sm:bg-transparent `
                                                 :"hidden sm:flex sm:flex-row"}>
 
-                        <li className=" border-b sm:border-b-0"><a href="" className="inline-block pl-4 py-5 w-full sm:py-0">About</a></li>
-                        <li className=" border-b sm:border-b-0"><a href="" className="inline-block pl-4 py-5 w-full sm:py-0 sm:pl-6">Discover</a></li>
-                        <li><a href="" className="inline-block pl-4 py-5 w-full sm:py-0 sm:pl-6">Get Started</a></li>                                       
+                        <li className=" border-b sm:border-b-0"><a href="" className="nava-tag">About</a></li>
+                        <li className=" border-b sm:border-b-0"><a href="" className="nava-tag">Discover</a></li>
+                        <li><a href="" className="nava-tag">Get Started</a></li>                                       
                        
                     </ul>
                 </nav>
