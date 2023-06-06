@@ -1,8 +1,14 @@
 import logo_mastercraft from "../images/logo-mastercraft.svg";
 import bookmark from "../images/icon-bookmark.svg";
+import { useState } from "react";
 
 
 function TopicComponent() {
+  const [clickbookmark,Setclickbookmark] = useState(false);
+  const ClickBookmark=()=>{
+    const prevclick = clickbookmark;
+    Setclickbookmark(!prevclick)
+  }
   return (
     <section className=" bg-white rounded-lg text-center px-5 pb-8
                            sm:px-10 sm:pb-10">
@@ -18,12 +24,16 @@ function TopicComponent() {
         </p>
         <div className="pt-4 flex justify-center items-center
                         lg:pt-8 lg:justify-between">
-            <span className=" text-white font-medium bg-[#3cb4ac] px-8 py-3 mr-4 rounded-3xl ">Back this project</span>
-            <img src={bookmark} alt="bookmark" className="lg:hidden"/>
-            <span className="hidden lg:block lg:relative lg:px-10 lg:py-4 lg:bg-[#3cb4ac44] lg:rounded-r-3xl lg:text-[#7a7a7a] lg:font-bold">
+            <button className=" btn-click ">Back this project</button>
+            <img src={bookmark} alt="bookmark" className={clickbookmark ?"brightness-[150%] opacity-80 btn-bookmark hover:cursor-pointer lg:hidden"
+                                                                        :"btn-bookmark hover:cursor-pointer lg:hidden"}
+                onClick={ClickBookmark}/>
+            <button className="hidden hover:cursor-pointer  lg:block lg:relative lg:px-10 lg:py-4 lg:bg-[#3cb4ac44] lg:rounded-r-full lg:text-[#7a7a7a] lg:font-bold" 
+                onClick={ClickBookmark}>
                 Bookmark
-                <img src={bookmark} alt="bookmark" className="lg:absolute lg:left-0 lg:-translate-x-1/2 lg:top-0"/>
-            </span>
+                <img src={bookmark} alt="bookmark" className={clickbookmark ?"brightness-[150%] opacity-80 btn-bookmark"
+                                                                            :"btn-bookmark"}/>
+            </button>
 
         </div>
     </section>
