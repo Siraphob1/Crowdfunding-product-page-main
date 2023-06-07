@@ -1,14 +1,26 @@
 import logo_mastercraft from "../images/logo-mastercraft.svg";
 import bookmark from "../images/icon-bookmark.svg";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import DataContext from "../Data/DataContext";
 
 
 function TopicComponent() {
+
+  const [btnBackthisproject,setbtnBackthisproject] = useContext(DataContext)
+
   const [clickbookmark,Setclickbookmark] = useState(false);
+
+  //---------------- FUNCTION ----------------
   const ClickBookmark=()=>{
-    const prevclick = clickbookmark;
-    Setclickbookmark(!prevclick)
+    const currentclick = !clickbookmark;
+    Setclickbookmark(currentclick)       
   }
+
+  const ClickBackthisproject=()=>{
+    const currentclick =!btnBackthisproject;
+    setbtnBackthisproject(currentclick);
+  }
+
   return (
     <section className=" bg-white rounded-lg text-center px-5 pb-8
                            sm:px-10 sm:pb-10">
@@ -24,7 +36,7 @@ function TopicComponent() {
         </p>
         <div className="pt-4 flex justify-center items-center
                         lg:pt-8 lg:justify-between">
-            <button className=" btn-click ">Back this project</button>
+            <button className=" btn-click " onClick={ClickBackthisproject}>Back this project</button>
             <img src={bookmark} alt="bookmark" className={clickbookmark ?"brightness-[150%] opacity-80 btn-bookmark hover:cursor-pointer lg:hidden"
                                                                         :"btn-bookmark hover:cursor-pointer lg:hidden"}
                 onClick={ClickBookmark}/>
@@ -34,8 +46,8 @@ function TopicComponent() {
                 <img src={bookmark} alt="bookmark" className={clickbookmark ?"brightness-[150%] opacity-80 btn-bookmark"
                                                                             :"btn-bookmark"}/>
             </button>
-
         </div>
+        
     </section>
   )
 }
