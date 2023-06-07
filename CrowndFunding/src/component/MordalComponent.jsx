@@ -17,7 +17,7 @@ const MordalComponent = () => {
 
     return (
         <div className={btnBackthisproject ?"":"hidden"}>
-            <div className={btnBackthisproject  ?"bg-mordal-dark"
+            <div className={btnBackthisproject  ?"bg-mordal-dark z-50"
                                                 :"hidden"}>
             </div>
             <div className="  z-50 absolute top-[8rem] left-1/2 -translate-x-1/2 bg-white w-11/12 h-auto rounded-lg px-4 py-8
