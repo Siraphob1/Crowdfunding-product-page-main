@@ -4,6 +4,7 @@ import DataContext from './Data/DataContext'
 import HeaderComponent from './component/HeaderComponent'
 import MainComponent from './component/MainComponent'
 import MordalComponent from './component/MordalComponent'
+import CompleteComponent from './component/CompleteComponent'
 
 
 
@@ -52,6 +53,7 @@ function App() {
      <HeaderComponent/>
      <MainComponent/>
      <MordalComponent/>
+     <CompleteComponent/>
     </DataContext.Provider>
   )
 }
