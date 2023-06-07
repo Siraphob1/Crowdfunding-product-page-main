@@ -23,7 +23,7 @@ const HeaderComponent=()=>{
                 <img src={hamburger} alt="hamburger" className={clickhamburger?"hidden  sm:hidden":"z-10 block w-4 h-4 hover:cursor-pointer sm:hidden"} onClick={Switchhamburger}/>
                 <img src={close_menu} alt="close_menu" className={clickhamburger?"z-50 block w-4 h-4 hover:cursor-pointer sm:hidden":"hidden sm:hidden"} onClick={Switchhamburger}/>
                 <div className={clickhamburger
-                                            ?"absolute z-40 top-0 left-0 bg-gradient-to-b from-black to-#7a7a7a opacity-90 w-full h-screen sm:hidden"
+                                            ?"bg-mordal-dark sm:hidden"
                                             :"hidden"}>                                                     
                 </div>               
                 <nav className=" absolute z-50 top-24 w-11/12 left-1/2 -translate-x-1/2  
