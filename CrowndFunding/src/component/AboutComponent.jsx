@@ -1,25 +1,11 @@
+import { useContext, useEffect } from "react"
 import CardComponent from "./CardComponent"
+import DataContext from "../Data/DataContext"
 
 const AboutComponent = () => {
-  const person=[
-    { topicname:"Bamboo Stand", 
-      pledge:"Pledge $25 or more", 
-      paragraph:"You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.",
-      count:101     
-    },
-    {
-      topicname:"Black Edition Stand", 
-      pledge:"Pledge $75 or more", 
-      paragraph:"You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
-      count:64
-    },
-    {
-      topicname:"Mahogany Special Edition", 
-      pledge:"Pledge $200 or more", 
-      paragraph:"You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.",
-      count:0
-    }
-  ]
+
+  const [btnBackthisproject,setbtnBackthisproject,person] = useContext(DataContext);
+  
   return (
     <section className=" bg-white rounded-lg  px-5 pt-8 py-4 mt-6
                         sm:px-10 sm:pt-10 ">
