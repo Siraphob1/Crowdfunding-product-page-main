@@ -13,8 +13,13 @@ const HeaderComponent=()=>{
         const prevstatus = clickhamburger;        
         Setclickhamburger(!prevstatus);
     }
+
+    const Closehamburger=()=>{
+        Setclickhamburger(false)
+    }
+
     return(
-        <header className=" w-full font-Commissioner font-medium sm:font-normal sm:text-white ">
+        <header className=" w-full font-Commissioner font-medium  sm:font-normal sm:text-white ">
             <img src={bg_mobile} alt="bg_mobile" className=" sm:hidden" />
             <img src={bg_desktop} alt="bg_desktop" className=" hidden  sm:block sm:w-full sm:h-auto" />
             <div className=" absolute top-0 flex justify-between w-full px-5 pt-8
@@ -33,9 +38,9 @@ const HeaderComponent=()=>{
                                                   sm:flex-row sm:bg-transparent `
                                                 :"hidden sm:flex sm:flex-row"}>
 
-                        <li className=" border-b sm:border-b-0"><a href="" className="nava-tag">About</a></li>
-                        <li className=" border-b sm:border-b-0"><a href="" className="nava-tag">Discover</a></li>
-                        <li><a href="" className="nava-tag">Get Started</a></li>                                       
+                        <li className=" border-b sm:border-b-0"><a href="#about" className="nava-tag" onClick={Closehamburger}>About</a></li>
+                        <li className=" border-b sm:border-b-0"><a href="#discover" className="nava-tag" onClick={Closehamburger}>Discover</a></li>
+                        <li><a href="#getstart" className="nava-tag" onClick={Closehamburger}>Get Started</a></li>                                       
                        
                     </ul>
                 </nav>
