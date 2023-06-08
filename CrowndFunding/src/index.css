@@ -35,6 +35,11 @@
   --FF:'Commissioner', sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
 body{
   background-color: rgb(246, 241, 241);
   font-family: var(--FF);
