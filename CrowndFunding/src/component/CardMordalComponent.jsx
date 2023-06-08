@@ -73,7 +73,7 @@ const CardMordalComponent = (props) => {
             <input type="text" placeholder='Enter your pledge' className=' py-3 px-3 rounded-full mb-4 xl:mb-0'/>
             <div className='flex items-center'>
                 <input type="text" onChange={SetNewPrice} value={price} className='px-6 py-3 w-[6rem] bg-white text-black font-bold border-2 rounded-full mr-2  focus:border-[#147b74]'/>
-                <button className='btn-click px-6 text-[1rem]' onClick={Btnclick}>Continue</button>
+                <a href="#thankyou" className='btn-click px-6 text-[1rem]' onClick={Btnclick}>Continue</a>                
             </div>
         </div>
       </form>
