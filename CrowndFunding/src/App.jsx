@@ -45,10 +45,10 @@ function App() {
   ]
 
   const [btnBackthisproject,setbtnBackthisproject] = useState(false)
-
+  const [pagethankyou,setPagethankyou] = useState(false)
   return (
     <DataContext.Provider value={
-      [btnBackthisproject,setbtnBackthisproject,person]
+      [btnBackthisproject,setbtnBackthisproject,person,pagethankyou,setPagethankyou]
     }>
      <HeaderComponent/>
      <MainComponent/>
