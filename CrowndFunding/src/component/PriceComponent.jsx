@@ -3,7 +3,8 @@
 const PriceComponent = () => {
   return (
     <section className=" bg-white rounded-lg text-center px-5 py-8 mt-6
-                            sm:px-10 sm:py-10">
+                            sm:px-10 sm:py-10"
+              id="discover">
       <div className="xl:flex ">
         <section className="flex flex-col items-center
                             xl:border-r xl:h-2/4 xl:pr-10">
