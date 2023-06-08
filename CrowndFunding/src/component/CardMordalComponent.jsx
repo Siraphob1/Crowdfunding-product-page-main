@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import DataContext from '../Data/DataContext';
 
 const CardMordalComponent = (props) => {
     const {topicname ,pledge, paragraph, count, topic,index,cardSelect,SelectCard } = props;
- 
+    const [btnBackthisproject,setbtnBackthisproject,person,pagethankyou,setPagethankyou] = useContext(DataContext)
+
     const [price,setPrice] = useState("$ 25")
 
+    //-------------Func--------------
     const SelectNewcard=()=>{
         SelectCard(index)
     }
@@ -16,6 +19,23 @@ const CardMordalComponent = (props) => {
 
     const Save=(event)=>{
         event.preventDefault()
+    }
+
+    const ShowPagethankyou=()=>{
+      if(index == cardSelect){
+        const currentclick = !pagethankyou
+        setPagethankyou(currentclick)
+      }
+    }
+
+    const ShowBackthisproject=()=>{
+      const currentclick = !btnBackthisproject
+      setbtnBackthisproject(currentclick)
+    }
+  
+    const Btnclick=()=>{
+      ShowBackthisproject()
+      ShowPagethankyou()
     }
 
     const cardshow= topic || count> 0   ?"card-mordal border opacity-80 active:opacity-50 xl:px-[1.3rem]"
@@ -53,7 +73,7 @@ const CardMordalComponent = (props) => {
             <input type="text" placeholder='Enter your pledge' className=' py-3 px-3 rounded-full mb-4 xl:mb-0'/>
             <div className='flex items-center'>
                 <input type="text" onChange={SetNewPrice} value={price} className='px-6 py-3 w-[6rem] bg-white text-black font-bold border-2 rounded-full mr-2  focus:border-[#147b74]'/>
-                <button className='btn-click px-6 text-[1rem]'>Continue</button>
+                <button className='btn-click px-6 text-[1rem]' onClick={Btnclick}>Continue</button>
             </div>
         </div>
       </form>
